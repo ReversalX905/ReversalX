@@ -1,0 +1,219 @@
+:root {
+  --clr-primary-900: #172554;
+  --clr-primary-800: #1e40af;
+  --clr-primary-700: #1d4ed8;
+  --clr-primary-600: #2563eb;
+  --clr-primary-500: #3b82f6;
+  --clr-primary-400: #60a5fa;
+  --clr-primary-300: #93c5fd;
+  
+  --clr-neutral-900: #0f172a;
+  --clr-neutral-100: #f1f5f9;
+  
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 60vh;
+  background: linear-gradient(135deg, var(--clr-primary-900), var(--clr-primary-700));
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  display: grid;
+  place-items: center;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+  background: linear-gradient(to right, #ffffff, #93c5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-slogan {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.product-section {
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 800px;  /* reduced from 1200px */
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--clr-primary-800);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  max-width: 600px;  /* added max-width */
+  margin: 0 auto;    /* center the card */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-badge {
+  background: var(--clr-primary-500);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0;
+}
+
+.features-list li {
+  padding-left: var(--space-xl);
+  position: relative;
+  margin-bottom: var(--space-sm);
+}
+
+.features-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--clr-primary-500);
+}
+
+.price-display {
+  text-align: center;
+  margin: var(--space-lg) 0;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-primary-300);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--clr-primary-500), var(--clr-primary-600));
+  color: white;
+  border: none;
+  width: 100%;
+  padding: var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.testimonials {
+  background: var(--clr-primary-900);
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--space-xl);
+  color: var(--clr-primary-300);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: var(--clr-primary-800);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--clr-primary-300);
+  margin-top: var(--space-md);
+}
+
+.testimonial-meta {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.telegram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  max-width: 400px;
+  margin: var(--space-xl) auto;
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, #0088cc, #0099ff);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.telegram-link:hover {
+  transform: translateY(-2px);
+}
+
+.telegram-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: var(--space-xl);
+  color: var(--clr-primary-300);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    margin: var(--space-lg);
+  }
+}
